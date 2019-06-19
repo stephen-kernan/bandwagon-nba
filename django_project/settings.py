@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+SECRET_KEY = 'exhlfdat&vfum(-34*c2uroi(($ww(yo$9pv98=e6p^gl(-eoj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -136,7 +136,6 @@ LOGIN_REDIRECT_URL = 'bandwagon-home'
 LOGIN_URL = 'login'
 
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-SECRET_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 
