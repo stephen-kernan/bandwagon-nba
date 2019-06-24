@@ -1,6 +1,8 @@
 {% extends 'bandwagon/base.html' %}  
 {% block content %}
     <article class="media content-section">
+        <img src="{{ post.image.url }}" class="article-img">
+        <br>
         <img src="{{ post.author.profile.image.url }}" alt="profile photo" class="rounded-circle article-img">
         <div class="media-body">
             <div class="article-metadata">

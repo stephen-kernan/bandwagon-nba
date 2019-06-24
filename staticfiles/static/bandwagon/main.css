@@ -5,8 +5,6 @@ body {
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
     color: #444444;
   }
   
@@ -14,12 +12,11 @@ body {
     margin: 0;
   }
   
-  .bg-black {
-    background-color: black;
+  .bg-steel {
+    background-color: gold;
   }
   
   .site-header .navbar-nav .nav-link {
-    font-family: 'Kanit', sans-serif;
     color: #cbd5db;
   }
   
@@ -32,7 +29,6 @@ body {
   }
   
   .content-section {
-    font-family: 'Roboto', sans-serif;
     background: #ffffff;
     padding: 10px 20px;
     border: 1px solid #dddddd;
@@ -87,14 +83,6 @@ body {
     font-size: 2.5rem;
   }
 
-  .title {
-    font-family: 'Creepster', sans-serif;
-    font-size: 1.75rem;
-    font-weight: 550;
-    font-style: oblique;
-    text-shadow:
-		-0.5px -0.5px 0 purple,
-		0.5px -0.5px 0 purple,
-		-0.5px 0.5px 0 purple,
-		0.5px 0.5px 0 purple;
+  .post-img {
+    width: 90%;
   }

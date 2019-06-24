@@ -9,15 +9,15 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="{% static 'bandwagon/main.css' %}">
-
+        <link rel="stylesheet" href="{% static 'bandwagon/main.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Creepster|Kanit:800i|Roboto:300&display=swap" rel="stylesheet">
         <title>Bandwagon NBA - {{ title }}</title>
     </head>
     <body>
         <header class="site-header">
-            <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+            <nav class="navbar navbar-expand-md navbar-dark bg-black fixed-top">
                 <div class="container">
-                    <a class="navbar-brand mr-4" href="{% url 'bandwagon-home' %}">Django Blog</a>
+                    <a class="navbar-brand mr-4 title" href="{% url 'bandwagon-home' %}">Bandwagon NBA</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -56,13 +56,14 @@
                 </div>
                 <div class="col-md-4">
                     <div class="content-section">
-                        <h3>Our Sidebar</h3>
-                        <p class='text-muted'>You can put any information here you'd like.
+                        <h3>League Leaders</h3>
+                        <p class='text-muted'>
                             <ul class="list-group">
-                            <li class="list-group-item list-group-item-light">Latest Posts</li>
-                            <li class="list-group-item list-group-item-light">Announcements</li>
-                            <li class="list-group-item list-group-item-light">Calendars</li>
-                            <li class="list-group-item list-group-item-light">etc</li>
+                                <li class="list-group-item list-group-item-light side-bar">Points: James Harden (31.6)</li>
+                                <li class="list-group-item list-group-item-light side-bar">Assists: Russell Westbrook (10.6)</li>
+                                <li class="list-group-item list-group-item-light side-bar">Rebounds: Nikola Jokic (13.0)</li>
+                                <li class="list-group-item list-group-item-light side-bar">Steals: Thaddeus Young (2.75)</li>
+                                <li class="list-group-item list-group-item-light side-bar">Blocks: Rudy Gobert (2.6)</li>
                             </ul>
                         </p>
                     </div>
