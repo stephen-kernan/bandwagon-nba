@@ -32,7 +32,7 @@ body {
   }
   
   .content-section {
-    height: 10%;
+    height: 45%;
     font-family: 'Roboto', sans-serif;
     background: #ffffff;
     padding: 0;
@@ -44,7 +44,7 @@ body {
   }
 
   .content-section:hover {
-    height: 13%;
+    height: 50%;
     font-family: 'Roboto', sans-serif;
     padding: 0;
     border: 1px solid #dddddd;
