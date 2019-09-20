@@ -149,6 +149,7 @@ body {
 
 .post-list-item {
   height: 15%;
+  min-height: 152.69px;
   font-family: 'Roboto', sans-serif;
   background: #ffffff;
   padding: 0;
@@ -161,9 +162,11 @@ body {
 
 .post-list-item:hover {
   height: 17%;
+  min-height: 173.06px;
   font-family: 'Roboto', sans-serif;
   padding: 0;
   border: 1px solid #dddddd;
   border-radius: 3px;
   margin-bottom: 20px;
 }
+
