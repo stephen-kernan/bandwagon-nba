@@ -32,21 +32,9 @@ body {
   }
   
   .content-section {
-    height: 45%;
     font-family: 'Roboto', sans-serif;
     background: #ffffff;
-    padding: 0;
-    border: 1px solid #dddddd;
-    border-radius: 3px;
-    margin-bottom: 20px;
-    transition: 0.1s;
-    overflow: hidden;
-  }
-
-  .content-section:hover {
-    height: 50%;
-    font-family: 'Roboto', sans-serif;
-    padding: 0;
+    padding: 3%;
     border: 1px solid #dddddd;
     border-radius: 3px;
     margin-bottom: 20px;
@@ -158,3 +146,24 @@ body {
     transform-origin: right;
     transform: skewX(-9deg);
   }
+
+.post-list-item {
+  height: 15%;
+  font-family: 'Roboto', sans-serif;
+  background: #ffffff;
+  padding: 0;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  transition: 0.1s;
+  overflow: hidden;
+}
+
+.post-list-item:hover {
+  height: 17%;
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
