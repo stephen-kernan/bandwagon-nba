@@ -22,21 +22,19 @@
     {% endif %}
 
     {% for post in posts %}
-    <article class="media">
-        <div class="content-section">
-            <div class="post-list-img-container">
-                <img src="{{ post.image.url }}" alt="profile photo" class="post-list-img">
+    <article class="media content-section">
+        <div class="post-list-img-container">
+            <img src="{{ post.image.url }}" alt="profile photo" class="post-list-img">
+        </div>
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
+                <small class="text-muted">{{ post.date_posted | date:'F d, Y'}}</small>
             </div>
-            <div class="media-body">
-                <div class="article-metadata">
-                    <a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
-                    <small class="text-muted">{{ post.date_posted | date:'F d, Y'}}</small>
-                </div>
-                <h2>
-                    <a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a>
-                </h2>
-                <p class="article-content preview-text">{{ post.content | truncatechars:175 }}</p>
-            </div>
+            <h2>
+                <a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a>
+            </h2>
+            <p class="article-content preview-text">{{ post.content | truncatechars:175 }}</p>
         </div>
     </article>
     {% endfor %}
