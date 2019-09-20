@@ -32,14 +32,31 @@ body {
   }
   
   .content-section {
+    height: 10%;
     font-family: 'Roboto', sans-serif;
     background: #ffffff;
-    padding: 10px 20px;
+    padding: 0;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    transition: 0.1s;
+    overflow: hidden;
+  }
+
+  .content-section:hover {
+    height: 13%;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
     border: 1px solid #dddddd;
     border-radius: 3px;
     margin-bottom: 20px;
   }
   
+  .article-detail {
+    width: 100%;
+    height: auto;
+    
+  }
   .article-title {
     color: #444444;
   }
@@ -75,6 +92,10 @@ body {
     height: 25px;
     vertical-align: middle;
   }
+
+  .article-title {
+    font-family: 'Kanit', sans-serif;
+  }
   
   .account-img {
     height: 125px;
@@ -103,4 +124,37 @@ body {
     height: auto;
     width: 100%;
     margin-right: 8px;
+  }
+
+  .post-list-img {
+    height: 100%;
+    width: 100%;
+    margin: 0 0 8 0;
+    transform: skewX(-9deg);
+    right: 15%;
+    position: relative;
+  }
+
+  .post-list-img-container{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 45%;
+    height: 100%;
+    background: #ffffff;
+  }
+
+  .post-list-img-container::before {
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 15%;
+    left: 0;
+    background: #ffffff;
+    position: absolute;
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -ms-transform: skew(-20deg);
+    transform-origin: right;
+    transform: skewX(-9deg);
   }
