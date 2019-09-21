@@ -81,5 +81,15 @@ def about(request):
     }
     return render(request, 'bandwagon/about.html/', context)
 
+def podcast(request):
+    context = {
+        'itunes': 'https://podcasts.apple.com/us/podcast/the-bandwagon-an-nba-podcast/id1434981308',
+        'google_music': 'https://play.google.com/music/m/I5y2ybgdupaykko534kmueg4lme?t=The_Bandwagon_An_NBA_Podcast',
+        'spotify': 'https://open.spotify.com/show/5LcSmChiRtgNo2gYY5qEpo',
+        'tune_in': 'http://tun.in/pi7IL',
+        'stitcher': 'https://www.stitcher.com/podcast/the-bandwagon-a-basketball-podcast',
+        'title': 'Podcast',
+    }
+    return render(request, 'bandwagon/podcast.html/', context)
 
 

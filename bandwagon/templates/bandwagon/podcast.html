@@ -1,0 +1,30 @@
+{% extends 'bandwagon/base.html' %}
+{% block content %}
+
+    <img src="../../../media/icons/bandwagon-logo.jpg" alt="The Logo for The Bandwagon: An NBA Podcast, available for streaming on your favorite service below" class="stream-logo"> 
+    <h3>Listen to Our Podcast on Your Favorite Streaming Service Below:</h3>
+ 
+    <div>
+        <a class="stream-list" href="{{ itunes }}">
+            <img class="stream-img" alt="Listen to the Bandwagon NBA Podcast on iTunes and the Apple Podcasts app by clicking here" src="../../../media/icons/apple-logo.jpg">
+        </a>
+
+        <a class="stream-list" href="{{ spotify }}">
+                <img class="stream-img" alt="Listen to the Bandwagon NBA Podcast on Spotify by clicking here" src="../../../media/icons/spotify-logo.png">
+        </a>
+
+        <a class="stream-list" href="{{ google_music }}">
+                <img class="stream-img" alt="Listen to the Bandwagon NBA Podcast on Google Play and Google Podcasts by clicking here" src="../../../media/icons/google-podcast-logo.png">
+        </a>
+
+        <a class="stream-list" href="{{ tune_in }}">
+                <img class="stream-img" alt="Listen to the Bandwagon NBA Podcast on TuneIn by clicking here" src="../../../media/icons/tune-in-logo.jpg">
+        </a>
+
+        <a class="stream-list" href="{{ stitcher }}">
+                <img class="stream-img" alt="Listen to the Bandwagon NBA Podcast on Stitcher by clicking here" src="../../../media/icons/stitcher-logo.png">
+        </a>
+    </div>
+
+
+{% endblock content %}

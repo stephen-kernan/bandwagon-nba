@@ -17,4 +17,5 @@ urlpatterns = [
     path('post/new/', PostCreateView.as_view(), name = 'post-create'),
     path('post/<int:pk>/update/', PostUpdateView.as_view(), name='post-update'),
     path('user/<str:username>', UserPostListView.as_view(), name='user-posts'),
+    path('podcast/', views.podcast, name='bandwagon-podcast'),
 ]
