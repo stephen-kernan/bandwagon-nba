@@ -45,14 +45,6 @@ body {
     height: auto;
     
   }
-  .article-title {
-    color: #444444;
-  }
-  
-  a.article-title:hover {
-    color: #428bca;
-    text-decoration: none;
-  }
   
   .article-content {
     white-space: pre-line;
@@ -81,8 +73,20 @@ body {
     vertical-align: middle;
   }
 
+  .article-title-main {
+    font-family: 'Kanit', sans-serif;
+    font-size: 2rem;
+    color: #444444;
+  }
+
+  a.article-title-main:hover {
+    color: #428bca;
+    text-decoration: none;
+  }
+
   .article-title {
     font-family: 'Kanit', sans-serif;
+    color: #444444;
   }
   
   .account-img {
@@ -115,7 +119,7 @@ body {
   }
 
   .post-list-img {
-    height: 100%;
+    height: auto;
     width: 100%;
     margin: 0 0 8 0;
     transform: skewX(-9deg);
@@ -128,7 +132,7 @@ body {
     padding: 0;
     margin: 0;
     width: 45%;
-    height: 100%;
+    height: auto;
     background: #ffffff;
   }
 
@@ -148,8 +152,7 @@ body {
   }
 
 .post-list-item {
-  height: 15%;
-  min-height: 152.69px;
+  height: 130px;
   font-family: 'Roboto', sans-serif;
   background: #ffffff;
   padding: 0;
@@ -161,8 +164,7 @@ body {
 }
 
 .post-list-item:hover {
-  height: 17%;
-  min-height: 173.06px;
+  height: 150px;
   font-family: 'Roboto', sans-serif;
   padding: 0;
   border: 1px solid #dddddd;
@@ -170,3 +172,36 @@ body {
   margin-bottom: 20px;
 }
 
+@media (max-width: 992px) {
+  .post-list-item {
+    height: 105px;
+  }
+  
+  .post-list-item:hover {
+    height: 115px;
+  }
+
+  .article-title-main {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .post-list-item {
+    height: 75px;
+  }
+  
+  .post-list-item:hover {
+    height: 85px;
+  }
+
+  .article-metadata {
+    font-size: 0.6em;
+  }
+
+  .article-title-main {
+    font-size: 1.2rem;
+    line-height: 15px;
+  }
+
+}
