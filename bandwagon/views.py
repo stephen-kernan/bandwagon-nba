@@ -92,4 +92,10 @@ def podcast(request):
     }
     return render(request, 'bandwagon/podcast.html/', context)
 
-
+def scores(request):
+    context = {
+        'kings_score': '98',
+        'lakers_score': '106',
+        'title': 'Scores',
+    }
+    return render(request, 'bandwagon/scores.html/', context)
