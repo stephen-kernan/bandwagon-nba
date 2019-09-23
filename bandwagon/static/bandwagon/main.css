@@ -236,6 +236,14 @@ body {
   margin-left: 7.5%;
 }
 
+p.name {
+  display: inline-block;
+  height: 40px;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: top;
+}
+
 
 @media (min-width: 1200px) {
   .score-away {

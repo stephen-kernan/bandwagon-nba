@@ -99,3 +99,190 @@ def scores(request):
         'title': 'Scores',
     }
     return render(request, 'bandwagon/scores.html/', context)
+
+def teams(request):
+    context = {
+        'teams': {
+            'hawks': {
+                'city': 'Atlanta',
+                'name': 'Hawks',
+                'logo': 'atlanta-logo.png',
+                'color': '',
+            },
+            'celtics': {
+                'city': 'Boston',
+                'name': 'Celtics',
+                'logo': 'boston-logo.png',
+                'color': '',
+            },
+            'nets': {
+                'city': 'Brooklyn',
+                'name': 'Nets',
+                'logo': 'brooklyn-logo.png',
+                'color': '',
+            },
+            'hornets': {
+                'city': 'Charlotte',
+                'name': 'Hornets',
+                'logo': 'charlotte-logo.png',
+                'color': '',
+            },
+            'bulls': {
+                'city': 'Chicago',
+                'name': 'Bulls',
+                'logo': 'chicago-logo.jpg',
+                'color': '',
+            },
+            'cavs': {
+                'city': 'Cleveland',
+                'name': 'Cavaliers',
+                'logo': 'cleveland-logo.jpg',
+                'color': '',
+            },
+            'mavs': {
+                'city': 'Dallas',
+                'name': 'Mavericks',
+                'logo': 'dallas-logo.jpg',
+                'color': '',
+            },
+            'nuggets': {
+                'city': 'Denver',
+                'name': 'Nuggets',
+                'logo': 'denver-logo.png',
+                'color': '',
+            },
+            'pistons': {
+                'city': 'Detroit',
+                'name': 'Pistons',
+                'logo': 'detroit-logo.png',
+                'color': '',
+            },
+            'warriors': {
+                'city': 'Golden State',
+                'name': 'Warriors',
+                'logo': 'golden-state-logo.jpg',
+                'color': '',
+            },
+            'rockets': {
+                'city': 'Houston',
+                'name': 'Rockets',
+                'logo': 'houston-logo.png',
+                'color': '',
+            },
+            'pacers': {
+                'city': 'Indiana',
+                'name': 'Pacers',
+                'logo': 'indiana-logo.png',
+                'color': '',
+            },
+            'clippers': {
+                'city': 'Los Angeles',
+                'name': 'Clippers',
+                'logo': 'la-clippers-logo.png',
+                'color': '',
+            },
+            'lakers': {
+                'city': 'Los Angeles',
+                'name': 'Lakers',
+                'logo': 'la-lakers-logo.png',
+                'color': '',
+            },
+            'grizzlies': {
+                'city': 'Memphis',
+                'name': 'Grizzlies',
+                'logo': 'memphis-logo.png',
+                'color': '',
+            },
+            'heat': {
+                'city': 'Miami',
+                'name': 'Heat',
+                'logo': 'miami-logo.png',
+                'color': '',
+            },
+            'bucks': {
+                'city': 'Milwaukee',
+                'name': 'Bucks',
+                'logo': 'milwaukee-logo.jpg',
+                'color': '',
+            },
+            'wolves': {
+                'city': 'Minnesota',
+                'name': 'Timberwolves',
+                'logo': 'minnesota-logo.png',
+                'color': '',
+            },
+            'pelicans': {
+                'city': 'New Orleans',
+                'name': 'Pelicans',
+                'logo': 'new-orleans-logo.png',
+                'color': '',
+            },
+            'knicks': {
+                'city': 'New York',
+                'name': 'Knicks',
+                'logo': 'new-york-knicks-logo.png',
+                'color': '',
+            },
+            'thunder': {
+                'city': 'Oklahoma City',
+                'name': 'Thunder',
+                'logo': 'okc-logo.png',
+                'color': '',
+            },
+            'magic': {
+                'city': 'Orlando',
+                'name': 'Magic',
+                'logo': 'orlando-logo.png',
+                'color': '',
+            },
+            'sixers': {
+                'city': 'Philadelphia',
+                'name': '76ers',
+                'logo': 'philadelphia-logo.png',
+                'color': '',
+            },
+            'suns': {
+                'city': 'Phoenix',
+                'name': 'Suns',
+                'logo': 'phoenix-logo.png',
+                'color': '',
+            },
+            'blazers': {
+                'city': 'Portland',
+                'name': 'Trailblazers',
+                'logo': 'portland-logo.png',
+                'color': '',
+            },
+            'kings': {
+                'city': 'Sacramento',
+                'name': 'Kings',
+                'logo': 'sacramento-logo.jpg',
+                'color': '',
+            },
+            'spurs': {
+                'city': 'San Antonio',
+                'name': 'Spurs',
+                'logo': 'san-antonio-logo.jpg',
+                'color': '',
+            },
+            'raptors': {
+                'city': 'Toronto',
+                'name': 'Raptors',
+                'logo': 'toronto-logo.png',
+                'color': '',
+            },
+            'jazz': {
+                'city': 'Utah',
+                'name': 'Jazz',
+                'logo': 'utah-logo.png',
+                'color': '',
+            },
+            'wizards': {
+                'city': 'Washington',
+                'name': 'Wizards',
+                'logo': 'washington-logo.png',
+                'color': '',
+            },
+        },
+    }
+    return render(request, 'bandwagon/teams.html/', context)
