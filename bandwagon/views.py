@@ -286,3 +286,11 @@ def teams(request):
         },
     }
     return render(request, 'bandwagon/teams.html/', context)
+
+def TeamDetailView(request, city, name, logo_url): 
+    context = {
+        'city': city,
+        'name': name,
+        'logo': logo_url
+    }
+    return render(request, 'bandwagon/team.html/', context)
