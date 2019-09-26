@@ -6,4 +6,8 @@
 
     <h1 class="article-title">The {{ city }} {{ name }}</h1>
 
+    {% for player in roster %}
+        <p>{{player}}</p>
+    {% endfor %}
+
 {% endblock content %}
