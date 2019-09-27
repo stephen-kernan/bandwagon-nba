@@ -87,6 +87,7 @@ body {
   .article-title {
     font-family: 'Kanit', sans-serif;
     color: #444444;
+    display: inline-block;
   }
   
   .account-img {
@@ -120,20 +121,23 @@ body {
 
   .post-list-img {
     height: auto;
-    width: 100%;
-    margin: 0 0 8 0;
-    transform: skewX(-9deg);
+    width: 130%;
+    transform: skewX(9deg);
     right: 15%;
     position: relative;
+    bottom: 20px;
   }
 
   .post-list-img-container{
     position: relative;
     padding: 0;
-    margin: 0;
+    margin: 0 10px 0 0;
     width: 45%;
     height: auto;
     background: #ffffff;
+    transform: skewX(-9deg);
+    right: 30px;
+    overflow: hidden;
   }
 
   .post-list-img-container::before {
@@ -144,12 +148,45 @@ body {
     left: 0;
     background: #ffffff;
     position: absolute;
-    -webkit-transform: skew(-20deg);
-    -moz-transform: skew(-20deg);
-    -ms-transform: skew(-20deg);
     transform-origin: right;
-    transform: skewX(-9deg);
   }
+
+  .player-img {
+    height: auto;
+    width: 100%;
+    margin-right: 8px;
+  }
+
+  .player-list-img {
+    height: 100%;
+    width: auto;
+    transform: skewX(9deg);
+    right: 15%;
+    position: relative;
+  }
+
+  .player-list-img-container{
+    position: relative;
+    padding: 0;
+    margin: 0 10px 0 0;
+    width: 25%;
+    height: 100%;
+    background: #ffffff;
+    transform: skewX(-9deg);
+    right: 15px;
+  }
+
+  .player-list-img-container::before {
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 15%;
+    left: 0;
+    background: #ffffff;
+    position: absolute;
+    transform-origin: right;
+  }
+
 
 .post-list-item {
   height: 130px;

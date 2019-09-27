@@ -32,7 +32,7 @@
                         <!-- Navbar Right Side -->
 
                         <div class="navbar-nav">
-                            {% if user.is_authenticated%}
+                        {% if user.is_authenticated%}
                             {% if user.is_staff%}
                                 <a href="{% url 'post-create' %}" class="nav-item nav-link">New Post</a>
                                 <a href="{% url 'profile' %}" class="nav-item nav-link">Profile</a>

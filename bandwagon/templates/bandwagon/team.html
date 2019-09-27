@@ -6,8 +6,21 @@
 
     <h1 class="article-title">The {{ city }} {{ name }}</h1>
 
-    {% for player in roster %}
-        <p>{{player}}</p>
+    {% for key, value in roster.items %}
+        <article class="media post-list-item">
+            <div class="player-list-img-container">
+                <img src="{{ value.player_img }}" class="player-list-img">
+            </div>
+
+            <div class="media-body">
+                <div class="article-metadata">
+                    <small class="text-muted"><strong>{{ value.player_number }}</strong> {{ value.player_position }}</small>
+                </div>
+                <h2 class="article-title-main">
+                    <div class="article-title-main">{{ value.player_name }}</a>
+                </h2>
+            </div>
+        </article>
     {% endfor %}
 
 {% endblock content %}
