@@ -1,5 +1,5 @@
-# from bs4 import BeautifulSoup
-# import requests
+from bs4 import BeautifulSoup
+import requests
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404
@@ -290,27 +290,27 @@ def teams(request):
     return render(request, 'bandwagon/teams.html/', context)
 
 def TeamDetailView(request, city, name, logo_url): 
-    # source = requests.get(f'https://www.nba.com/teams/{name.lower()}').text
+    source = requests.get(f'https://www.nba.com/teams/{name.lower()}').text
 
-    # soup = BeautifulSoup(source, 'lxml')
+    soup = BeautifulSoup(source, 'lxml')
 
-    # sections = soup.find_all('section', {'class': 'nba-player-index__trending-item'})
+    sections = soup.find_all('section', {'class': 'nba-player-index__trending-item'})
 
-    # roster = {}
+    roster = {}
 
-    # for player in sections:
-    #     player_name = player.a['title']
-    #     player_number = player.span.text
-    #     player_position = player.find('div', class_ = 'nba-player-index__details').span.text
-    #     player_img = player.img['data-src']
+    for player in sections:
+        player_name = player.a['title']
+        player_number = player.span.text
+        player_position = player.find('div', class_ = 'nba-player-index__details').span.text
+        player_img = player.img['data-src']
 
-    #     roster[player_name] = {'player_name': player_name, 'player_number': player_number, 'player_position': player_position, 'player_img': player_img}
+        roster[player_name] = {'player_name': player_name, 'player_number': player_number, 'player_position': player_position, 'player_img': player_img}
 
     context = {
         'city': city,
         'name': name,
         'logo': logo_url,
-        # 'roster': roster
+        'roster': roster
     }
 
     return render(request, 'bandwagon/team.html/', context)
