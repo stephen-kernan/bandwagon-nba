@@ -303,8 +303,9 @@ def TeamDetailView(request, city, name, logo_url):
         player_number = player.span.text
         player_position = player.find('div', class_ = 'nba-player-index__details').span.text
         player_img = player.img['data-src']
+        player_url = player.a['href']
 
-        roster[player_name] = {'player_name': player_name, 'player_number': player_number, 'player_position': player_position, 'player_img': player_img}
+        roster[player_name] = {'player_name': player_name, 'player_number': player_number, 'player_position': player_position, 'player_img': player_img, 'player_url': player_url}
 
     context = {
         'city': city,

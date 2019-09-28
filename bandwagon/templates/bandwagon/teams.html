@@ -1,6 +1,9 @@
 {% extends 'bandwagon/base.html' %}
 {% block content %}
+    <h1 class="article-title">All Teams</h1>
 
+    <br>
+    
     {% for key, value in teams.items %}
         <a class="stream-list" href="{% url 'bandwagon-team' value.city value.name value.logo %}">
             <img class="stream-img" alt="The Logo for the {{ value.city }} {{ value.name }}" src="../../../media/logos/{{ value.logo }}">

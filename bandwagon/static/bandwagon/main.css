@@ -88,6 +88,7 @@ body {
     font-family: 'Kanit', sans-serif;
     color: #444444;
     display: inline-block;
+    border-bottom: 2px solid darkslategray;
   }
   
   .account-img {
@@ -416,10 +417,12 @@ p.name {
 @media (max-width: 440px) {
   .post-list-item {
     height: 105px;
+    box-shadow: none;
   }
   
   .post-list-item:hover {
     height: 115px;
+    box-shadow: none;
   }
 
   .article-metadata {
