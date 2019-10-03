@@ -20,5 +20,6 @@ urlpatterns = [
     path('podcast/', views.podcast, name='bandwagon-podcast'),
     path('scores/', views.scores, name='bandwagon-scores'),
     path('teams/', views.teams, name='bandwagon-teams'),
-    path('team/<str:city>/<str:name>/<str:logo_url>/', views.TeamDetailView, name='bandwagon-team'),
+    path('team/<str:city>/<str:name>/<str:logo_url>/<str:abbr>/', views.TeamDetailView, name='bandwagon-team'),
+    path('player/<str:player_initial>/<str:player_id>/', views.PlayerDetailView, name='bandwagon-player'),
 ]
