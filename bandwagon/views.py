@@ -350,7 +350,7 @@ def PlayerDetailView(request, player_initial, player_id):
 
     table = soup.find('table', {'id': 'per_game'})
     rows = table.find_all('tr')
-    chart = [['Season', ['Age', 'Team', 'League', 'G', 'GS', 'Min', 'FG', 'FGA', 'FG%', '3P', '3PA', '3P%', '2P', '2PA', '2P%', 'eFG%', 'FT', 'FTA', 'ORB', 'DRB', 'TRB', 'AST', 'BLK', 'TOV', 'PF', 'PTS']]]
+    chart = [['Season', ['Age', 'Team', 'League', 'POS' 'G', 'GS', 'Min', 'FG', 'FGA', 'FG%', '3P', '3PA', '3P%', '2P', '2PA', '2P%', 'eFG%', 'FT', 'FTA', 'ORB', 'DRB', 'TRB', 'AST', 'BLK', 'TOV', 'PF', 'PTS']]]
     player_name = soup.h1.text
 
     for tr in rows:
@@ -366,7 +366,7 @@ def PlayerDetailView(request, player_initial, player_id):
     context = {
         'player_initial': player_initial,
         'player_id': player_id,
-        'player_name': soup.h1.text,
+        'player_name': player_name,
         'stats': chart
     }
 

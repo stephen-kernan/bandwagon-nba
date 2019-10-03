@@ -2,6 +2,21 @@
 {% block content %}
     <img class="stream-img-container" src="https://d2cwpp38twqe55.cloudfront.net/req/201909121/images/players/{{ player_id }}.jpg">   
     <h1 class="article-title">{{ player_name }}</h1>
-    <p>{{ stats }}</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <table>
+        {% for array in stats %}
+            <tr>
+                <th>{{ array.0 }}</th>
+                {% for stat in array.1 %}
+                    <td>{{stat}}</td>  
+                {% endfor %}          
+            </tr>
+        {% endfor %}
+    </table>
 
 {% endblock content %}
