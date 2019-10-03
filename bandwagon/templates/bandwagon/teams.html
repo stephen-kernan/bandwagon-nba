@@ -6,7 +6,7 @@
 
     {% for key, value in teams.items %}
         <a class="stream-list" href="{% url 'bandwagon-team' value.city value.name value.logo value.abbr %}">
-            <img class="stream-img" alt="The Logo for the {{ value.city }} {{ value.name }}" src="../../../media/logos/{{ value.logo }}">
+            <img class="stream-img" alt="The Logo for the {{ value.city }} {{ value.name }}" src="../../../media/logos/{{value.logo}}">
             <p class="name">{{value.city}} {{value.name}}</p>
         </a>
     {% endfor %}
