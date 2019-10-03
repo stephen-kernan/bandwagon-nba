@@ -348,12 +348,26 @@ def PlayerDetailView(request, player_initial, player_id):
     source = requests.get(f'https://www.basketball-reference.com/players/{player_initial}/{player_id}.html').text
     soup = BeautifulSoup(source, 'lxml')
 
+    table = soup.find('table', {'id': 'per_game'})
+    rows = table.find_all('tr')
+    chart = [['Season', ['Age', 'Team', 'League', 'G', 'GS', 'Min', 'FG', 'FGA', 'FG%', '3P', '3PA', '3P%', '2P', '2PA', '2P%', 'eFG%', 'FT', 'FTA', 'ORB', 'DRB', 'TRB', 'AST', 'BLK', 'TOV', 'PF', 'PTS']]]
     player_name = soup.h1.text
+
+    for tr in rows:
+        td = tr.find_all('td')
+        header = tr.find('a')
+        if header:
+            row = [[header.text, [i.text for i in td]]]
+        else: 
+            row = [['', [i.text for i in td]]]
+        chart += row
+
 
     context = {
         'player_initial': player_initial,
         'player_id': player_id,
-        'player_name': player_name
+        'player_name': soup.h1.text,
+        'stats': chart
     }
 
     return render(request, 'bandwagon/player.html/', context)
