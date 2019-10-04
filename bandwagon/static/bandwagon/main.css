@@ -282,6 +282,20 @@ p.name {
   vertical-align: top;
 }
 
+td, th {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+}
+
+table {
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-top: 3%;
+}
 
 @media (min-width: 1200px) {
   .score-away {
