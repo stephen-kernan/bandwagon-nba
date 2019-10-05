@@ -291,6 +291,7 @@ td {
 .table-container {
   width: 100%;
   overflow-x: scroll;
+  border: 1px solid #ddd;
 }
 
 .sticky {
@@ -303,6 +304,7 @@ td {
   width: max-content;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
+  margin: 0;
 }
 
 @media (min-width: 1200px) {
