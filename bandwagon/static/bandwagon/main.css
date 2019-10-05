@@ -5,7 +5,7 @@ body {
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Kanit', sans-serif;
     font-weight: 700;
     color: #444444;
   }
@@ -88,7 +88,6 @@ body {
     font-family: 'Kanit', sans-serif;
     color: #444444;
     display: inline-block;
-    border-bottom: 2px solid darkslategray;
   }
   
   .account-img {
@@ -282,19 +281,28 @@ p.name {
   vertical-align: top;
 }
 
-td, th {
+td {
   border: 1px solid #ddd;
-  border-collapse: collapse;
-}
-
-table {
-  border: 1px solid #ddd;
-  width: 100%;
+  background: #ffffff;
+  width: 20px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .table-container {
-  overflow-x: auto;
-  margin-top: 3%;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.sticky {
+  position: sticky;
+  left: 0;
+  right: 5px;
+  background: #ffffff;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: max-content;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
 }
 
 @media (min-width: 1200px) {

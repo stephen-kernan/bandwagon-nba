@@ -7,7 +7,7 @@
         <table>
             {% for array in stats %}
                 <tr>
-                    <th>{{ array.0 }}</th>
+                    <td class="sticky">{{ array.0 }}</th>
                     {% for stat in array.1 %}
                         <td>{{stat}}</td>  
                     {% endfor %}          
