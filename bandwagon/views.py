@@ -13,7 +13,7 @@ from django.views.generic import (
     DeleteView
 )
 
-# Create your views here.
+# home page
 def home(request):
     context = {
         'posts': Post.objects.all(),
@@ -82,6 +82,12 @@ def about(request):
         'title': 'About',
     }
     return render(request, 'bandwagon/about.html/', context)
+
+def playfinder(request):
+    context = {
+        
+    }
+    return render(request, 'bandwagon/playfinder.html', context)
 
 def podcast(request):
     context = {
@@ -320,6 +326,7 @@ def teams(request):
     return render(request, 'bandwagon/teams.html/', context)
 
 def TeamDetailView(request, city, name, logo_url, abbr): 
+    # pulls roster from basketball-reference
     source = requests.get(f'https://www.basketball-reference.com//teams/{abbr}/2020.html').text
     soup = BeautifulSoup(source, 'lxml')
     table = soup.find('table', {'id': 'roster'})
@@ -327,6 +334,7 @@ def TeamDetailView(request, city, name, logo_url, abbr):
     rows = body.find_all('tr')
     roster = {}
  
+    # assigns variables and adds to roster array for context
     for row in rows:
         player_name = row.find('a').text
         player_position = row.find('td', {'data-stat': 'pos'}).text

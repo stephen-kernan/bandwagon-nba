@@ -1,0 +1,45 @@
+.pf-collapsible, .pf-data-header {
+    background-color: none;
+    border: none;
+    color: #52006b;
+  }
+  
+.pf-data {
+    display: none;
+    flex-flow: column;
+    margin-top: 5%;
+    margin-right: auto;
+}
+
+.pf-data-text, .pf-data-item-inner {
+    display: none;
+    padding-left: 10%;
+}
+
+.pf-query {
+    background-color: #eeeeee;
+    box-shadow: 0px 3px 7px #777777;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+}
+
+.pf-row {
+    width: auto;
+}
+
+.pf-specific {
+    display: none;
+    padding-top: 2%;
+}
+
+.pf-submit {
+    background-color: #52006b;
+    color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    margin: 3% 0 2% 0;
+    padding: 1.5% 3%;
+}

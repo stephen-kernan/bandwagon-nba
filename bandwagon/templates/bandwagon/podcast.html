@@ -1,4 +1,10 @@
 {% extends 'bandwagon/base.html' %}
+{% load static %}
+
+{% block extracss %}
+    <link rel="stylesheet" href="{% static 'bandwagon/podcast.css' %}">
+{% endblock %}
+
 {% block content %}
 
     <img src="../../../media/icons/bandwagon-logo.jpg" alt="The Logo for The Bandwagon: An NBA Podcast, available for streaming on your favorite service below" class="stream-logo"> 

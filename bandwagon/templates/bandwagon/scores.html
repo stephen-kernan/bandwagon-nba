@@ -1,4 +1,10 @@
 {% extends 'bandwagon/base.html' %}
+{% load static %}
+
+{% block extracss %}
+    <link rel="stylesheet" href="{% static 'bandwagon/scores.css' %}">
+{% endblock %}
+
 {% block content %}
     <h1 class="article-title">Scores</h1>
 

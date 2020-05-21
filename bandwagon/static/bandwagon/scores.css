@@ -1,0 +1,166 @@
+.score-away {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  height: 125px;
+  background-color: red;
+  transform: skewX(-9deg);
+  right: 2%;
+  margin-bottom: 3%;
+  padding-top: 27.5px;
+}
+  
+.score-home {
+  position: relative;
+  width: 100%;
+  height: 125px;
+  background-color: grey;
+  overflow: hidden;
+}
+
+.home-logo {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  display: inline-block;
+  margin-bottom: 7%;
+  margin-left: 35.5%;
+}
+
+.away-logo {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  transform: skewX(9deg);
+  margin-left: 7.5%;
+}
+
+@media (min-width: 1200px) {
+  .score-away {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    height: 125px;
+    background-color: red;
+    transform: skewX(-9deg);
+    right: 2%;
+    margin-bottom: 3%;
+    padding-top: 27.5px;
+  }
+  
+  .score-home {
+    position: relative;
+    width: 100%;
+    height: 125px;
+    background-color: grey;
+    overflow: hidden;
+  }
+
+  .home-logo {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: black;
+    display: inline-block;
+    margin-bottom: 44px;
+    margin-left: 37.5%;
+  }
+  
+  .away-logo {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: black;
+    transform: skewX(9deg);
+    margin-left: 7.5%;
+  }
+
+}
+
+@media (max-width: 992px) {
+  .score-away {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    height: 125px;
+    background-color: red;
+    transform: skewX(-9deg);
+    right: 2%;
+    margin-bottom: 3%;
+    padding-top: 27.5px;
+  }
+  
+  .score-home {
+    position: relative;
+    width: 100%;
+    height: 125px;
+    background-color: grey;
+    overflow: hidden;
+  }
+
+  .home-logo {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: black;
+    display: inline-block;
+    margin-bottom: 37.5px;
+    margin-left: 31%;
+  }
+  
+  .away-logo {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: black;
+    transform: skewX(9deg);
+    margin-left: 7.5%;
+  }
+}
+
+@media (max-width: 770px) {
+  .home-logo {
+    margin-bottom: 39.5px;
+    margin-left: 31%;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-logo {
+    margin-left: 33%;
+  }
+}
+@media (max-width: 500px) {
+  .home-logo {
+    margin-bottom: 38px;
+    margin-left: 31%;
+  }
+}
+
+@media (max-width: 468px) {
+  .home-logo {
+    margin-bottom: 36px;
+    margin-left: 30%;
+  }
+}
+
+@media (max-width: 440px) {
+  .home-logo {
+    margin-bottom: 36px;
+    margin-left: 28.5%;
+  }
+}
+
+@media (max-width: 408px) {
+  .home-logo {
+    margin-left: 27%;
+  }
+}
+@media (max-width: 398px) {
+  .home-logo {
+    margin-bottom: 34px;
+    margin-left: 25.5%;
+  }
+}

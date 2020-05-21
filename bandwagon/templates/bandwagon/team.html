@@ -1,4 +1,11 @@
-{% extends 'bandwagon/base.html' %}
+{% extends 'bandwagon/base_no_side.html' %}
+{% load static %}
+
+{% block extracss %}
+    <link rel="stylesheet" href="{% static 'bandwagon/team.css' %}">
+    <link rel="stylesheet" href="{% static 'bandwagon/podcast.css' %}">
+{% endblock extracss %}
+
 {% block content %}
     <div class="stream-list">
         <img class="stream-img" alt="The Logo for the {{ city }} {{ name }}" src="../../../../../media/logos/{{logo}}">   
