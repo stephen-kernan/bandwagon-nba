@@ -2,7 +2,9 @@
 {% load static %}
 
 {% block content %}
-    {% if is_paginated %}
+
+
+<!-- {% if is_paginated %}
 
         {% if page_obj.has_previous %}
             <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-outline-info mb-4">Previous</a>
@@ -18,9 +20,25 @@
 
         {% if page_obj.has_next %}
             <a href="?page={{ page_obj.next_page_number }}" class="btn btn-outline-info mb-4">Next</a>
-        {% endif %}
+        {% endif %} -->
+<!-- 
+    {% endif %} -->
 
-    {% endif %}
+    <article class="media first-post">
+        <div class="first-img-container">
+            <img src="{{ latest.image.url }}" alt="profile photo" class="first-img">
+        </div>
+        <div class="media-body">
+            <h2 class="article-title-main">
+                <a class="article-title-main" href="{% url 'post-detail' latest.id %}">{{ latest.title }}</a>
+            </h2>
+            <div class="article-metadata">
+                <a class="mr-2" href="{% url 'user-posts' latest.author.username %}">{{ latest.author.first_name }} {{ latest.author.last_name }}</a>
+                <small class="text-muted">{{ latest.date_posted | date:'F d, Y'}}</small>
+            </div>
+
+        </div>
+    </article>
 
     {% for post in posts %}
     <article class="media post-list-item">

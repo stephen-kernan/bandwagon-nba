@@ -15,7 +15,7 @@ ul {
 }
 
 .bg-black {
-  background-color: black;
+  background-color: #000a50;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -59,7 +59,6 @@ ul {
 .article-metadata {
   padding-bottom: 1px;
   margin-bottom: 4px;
-  border-bottom: 1px solid #e3e3e3
 }
 
 .article-metadata a:hover {
@@ -119,6 +118,42 @@ a.article-title-main:hover {
   margin-right: 8px;
 }
 
+.first-post {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 2px 2px 3px gray;
+  flex-flow: column;
+  overflow: hidden;
+  padding: 0;
+  margin-bottom: 2%;
+}
+
+.first-post .article-title-main {
+  padding-left: 2%;
+  padding-top: 1%;
+}
+
+.first-post .media-body {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+.first-post .article-metadata {
+  align-self: flex-end;
+  padding-right: 5%;
+}
+
+.first-img-container {
+  border-radius: 15px;
+  width: 100%;
+}
+
+.first-img {
+  width: 100%;
+}
+
+
 .post-list-img {
   height: auto;
   width: 130%;
@@ -157,7 +192,7 @@ a.article-title-main:hover {
   background: #ffffff;
   padding: 0;
   border: 1px solid #dddddd;
-  border-radius: 3px;
+  border-radius: 15px;
   margin-bottom: 20px;
   transition: 0.1s;
   overflow: hidden;
@@ -169,7 +204,6 @@ a.article-title-main:hover {
   font-family: 'Roboto', sans-serif;
   padding: 0;
   border: 1px solid #dddddd;
-  border-radius: 3px;
   margin-bottom: 20px;
   box-shadow: 2px 1px 3px #29557c;
 }
