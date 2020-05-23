@@ -265,7 +265,7 @@ p.name {
 
   .article-title-main {
     font-size: 1.2rem;
-    line-height: 15px;
+    line-height: inherit;
   }
 }
 
