@@ -12,14 +12,14 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'bandwagon/main.css' %}">
         {% block extracss %} {% endblock %}
-        <link href="https://fonts.googleapis.com/css?family=Creepster|Kanit:800i|Roboto:300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Kanit:wght@400;900&family=Montserrat:ital,wght@0,300;0,400;0,700;0,800;1,300;1,700;1,800&family=Roboto&display=swap" rel="stylesheet">
         <title>Bandwagon NBA - {{ title }}</title>
     </head>
     <body>
         <header class="site-header">
             <nav class="navbar navbar-expand-md navbar-dark bg-black fixed-top">
                 <div class="container">
-                    <a class="navbar-brand mr-4 title" href="{% url 'bandwagon-home' %}">Bandwagon NBA</a>
+                    <a class="navbar-brand mr-4 title" href="{% url 'bandwagon-home' %}">THE BANDWAGON</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -65,7 +65,7 @@
                 </div>
                     <div class="col-md-4">
                         <div class="sidebar-section">
-                            <h3>League Leaders</h3>
+                            <h3 class="section-divider">League Leaders</h3>
                             <p class='text-muted'>
                                 <ul class="list-group">
                                     <li class="list-group-item list-group-item-light side-bar">Points: James Harden (31.6)</li>
