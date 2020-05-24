@@ -28,7 +28,11 @@ ul {
 }
 
 .bg-black {
-  background-color: #000a50;
+  background-color: #000f44;
+}
+
+#bandwagon-logo {
+  height: 4rem;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -251,12 +255,10 @@ p.name {
 @media (max-width: 440px) {
   .post-list-item {
     height: 105px;
-    box-shadow: none;
   }
   
   .post-list-item:hover {
     height: 115px;
-    box-shadow: none;
   }
 
   .article-metadata {
