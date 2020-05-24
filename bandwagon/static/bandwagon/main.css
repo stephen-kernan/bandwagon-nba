@@ -3,6 +3,10 @@ body {
     color: #333333;
     margin-top: 5rem;
   }
+
+.container {
+  max-width: 100%;
+}
   
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
@@ -35,6 +39,19 @@ ul {
   height: 4rem;
 }
 
+.navbar {
+  padding-bottom: 0;
+}
+
+.navbar>.container {
+  align-items: flex-end;
+}
+
+.navbar-toggler {
+  align-self: center;
+  border: none;
+}
+
 .site-header .navbar-nav .nav-link {
   font-family: 'Kanit', sans-serif;
   font-weight: 700;
@@ -43,7 +60,9 @@ ul {
 }
 
 .site-header .navbar-nav .nav-link:hover {
-  color: #ff6e7c;
+  color: #ffffff;
+  border-bottom: 0.25rem solid #e31017;
+  padding-bottom: 0.25rem;
 }
 
 .site-header .navbar-nav .nav-link.active {
@@ -128,11 +147,7 @@ a.article-title-main:hover {
 }
 
 .title {
-  font-family: 'Kanit', sans-serif;
-  font-size: 2rem;
-  font-weight: 900;
-  font-style: normal;
-  text-shadow: 2px 2px 2px #21252982, 3px 3px 0 #ff2439;
+  border-bottom: 0.25rem solid #ff2439;
 }
 
 .post-img {
