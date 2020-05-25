@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
+from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from .models import Post
@@ -18,7 +19,6 @@ def home(request):
     context = {
         'posts': Post.objects.all(),
         'title': 'Home',
-        'latest': Post.objects.last(),
     }
     return render(request, 'bandwagon/home.html/', context)
 
@@ -31,9 +31,12 @@ class PostListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['posts'] = Post.objects.all()[0:len(Post.objects.all())]
+        p = Paginator(Post.objects.all().order_by('-date_posted')[1:(len(Post.objects.all()))], self.paginate_by)
+        context['posts'] = p.page(context['page_obj'].number)
         context['latest'] = Post.objects.latest('date_posted')
         return context
+
+
 
 
 class UserPostListView(ListView):

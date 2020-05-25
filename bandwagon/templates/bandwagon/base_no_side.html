@@ -13,13 +13,18 @@
         <link rel="stylesheet" href="{% static 'bandwagon/main.css' %}">
         {% block extracss %}{% endblock %}
         <link href="https://fonts.googleapis.com/css?family=Creepster|Kanit:800i|Roboto:300&display=swap" rel="stylesheet">
-        <title>Bandwagon NBA - {{ title }}</title>
-    </head>
+        {% if title %}    
+            <title>{{ title }}</title>
+        {% else %}
+            <title>The Bandwagon - NBA News and Stories</title>
+        {% endif %}    </head>
     <body>
         <header class="site-header">
             <nav class="navbar navbar-expand-md navbar-dark bg-black fixed-top">
                 <div class="container">
-                    <a class="navbar-brand mr-4 title" href="{% url 'bandwagon-home' %}">Bandwagon NBA</a>
+                    <a class="navbar-brand title" href="{% url 'bandwagon-home' %}">
+                        <img src="../../../media/logos/The Bandwagon.png" alt="Logo for The Bandwagon NBA" id="bandwagon-logo">
+                    </a>          
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
