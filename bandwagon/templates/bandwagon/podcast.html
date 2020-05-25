@@ -1,4 +1,4 @@
-{% extends 'bandwagon/base.html' %}
+{% extends 'bandwagon/base_no_side.html' %}
 {% load static %}
 
 {% block extracss %}
@@ -7,29 +7,78 @@
 
 {% block content %}
 
-    <img src="../../../media/icons/bandwagon-logo.jpg" alt="The Logo for The Bandwagon: An NBA Podcast, available for streaming on your favorite service below" class="stream-logo"> 
-    <h3>Listen to our Podcast on your favorite streaming service below:</h3>
+
  
-    <div>
-        <a class="stream-list" href="{{ itunes }}" target="blank">
-            <img class="stream-img" alt="Listen to the Bandwagon NBA Podcast on iTunes and the Apple Podcasts app by clicking here" src="../../../media/icons/apple-logo.jpg">
-        </a>
+    <div class="stream-container">
+        <img src="../../../media/icons/bandwagon-logo.png" alt="The Logo for The Bandwagon: An NBA Podcast, available for streaming on your favorite service below" class="stream-logo"> 
+        <h3>Listen to our Podcast on your favorite streaming service below:</h3>
+        <article class="media stream-list-item">
 
-        <a class="stream-list" href="{{ spotify }}" target="blank">
-                <img class="stream-img" alt="Listen to the Bandwagon NBA Podcast on Spotify by clicking here" src="../../../media/icons/spotify-logo.png">
-        </a>
+            <div class="stream-list-img-container">
+                <img src="../../../media/icons/apple-logo.jpg" alt="profile photo" class="stream-list-img">
+            </div>
+            <div class="media-body">
+                <h2 class="article-title-main">
+                    <a class="article-title-main" href="{{ itunes }}">iTunes</a>
+                </h2>
+                <!-- <p class="article-content preview-text">{{ post.content | truncatechars:175 }}</p> -->
+            </div>
+        </article>
 
-        <a class="stream-list" href="{{ google_music }}" target="blank">
-                <img class="stream-img" alt="Listen to the Bandwagon NBA Podcast on Google Play and Google Podcasts by clicking here" src="../../../media/icons/google-podcast-logo.png">
-        </a>
+        <article class="media stream-list-item">
+            <div class="stream-list-img-container">
+                <img src="../../../media/icons/spotify-logo.png" alt="profile photo" class="stream-list-img">
+            </div>
+            <div class="media-body">
+                <h2 class="article-title-main">
+                    <a class="article-title-main" href="{{ spotify }}">Spotify</a>
+                </h2>
+            </div>
+        </article>
 
-        <a class="stream-list" href="{{ tune_in }}" target="blank">
-                <img class="stream-img" alt="Listen to the Bandwagon NBA Podcast on TuneIn by clicking here" src="../../../media/icons/tune-in-logo.jpg">
-        </a>
+        <article class="media stream-list-item">
+            <div class="stream-list-img-container">
+                <img src="../../../media/icons/google-podcast-logo.png" alt="profile photo" class="stream-list-img">
+            </div>
+            <div class="media-body">
+                <h2 class="article-title-main">
+                    <a class="article-title-main" href="{{ google_music }}">Google Music</a>
+                </h2>
+            </div>
+        </article>
 
-        <a class="stream-list" href="{{ stitcher }}" target="blank">
-                <img class="stream-img" alt="Listen to the Bandwagon NBA Podcast on Stitcher by clicking here" src="../../../media/icons/stitcher-logo.png">
-        </a>
+        <article class="media stream-list-item">
+            <div class="stream-list-img-container">
+                <img src="../../../media/icons/tune-in-logo.jpg" alt="profile photo" class="stream-list-img">
+            </div>
+            <div class="media-body">
+                <h2 class="article-title-main">
+                    <a class="article-title-main" href="{{ tune_in }}">TuneIn</a>
+                </h2>
+            </div>
+        </article>
+
+        <article class="media stream-list-item">
+            <div class="stream-list-img-container">
+                <img src="../../../media/icons/stitcher-logo.png" alt="profile photo" class="stream-list-img">
+            </div>
+            <div class="media-body">
+                <h2 class="article-title-main">
+                    <a class="article-title-main" href="{{ stitcher }}">Stitcher</a>
+                </h2>
+            </div>
+        </article>
+
+        <article class="media stream-list-item">
+            <div class="stream-list-img-container">
+                <img src="../../../media/icons/soundcloud-logo.png" alt="profile photo" class="stream-list-img">
+            </div>
+            <div class="media-body">
+                <h2 class="article-title-main">
+                    <a class="article-title-main" href="{{ soundcloud }}">Soundcloud</a>
+                </h2>
+            </div>
+        </article>
     </div>
 
 

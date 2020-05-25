@@ -1,3 +1,27 @@
+.post-list-img {
+  height: auto;
+  width: 130%;
+  transform: skewX(9deg);
+  right: 15%;
+  position: relative;
+  bottom: 20px;
+}
+
+.stream-container {
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 5%;
+  padding-top: 3%;
+
+}
+
+.stream-container h3 {
+  text-align: center;
+}
+
 .stream-img {
     width: 100%;
     border-radius: 50%;
@@ -12,12 +36,52 @@
     box-shadow: 2px 1px 3px darkslategray;
 }
 
+.stream-list-item {
+  height: 130px;
+  width: 40%;
+  font-family: 'Roboto', sans-serif;
+  background: #ffffff;
+  padding: 0;
+  border-radius: 15px;
+  margin-bottom: 2%;
+  transition: 0.1s;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 1.5px 0.75px 3px darkslategrey;
+  align-items: center;
+}
+
+.stream-list-img {
+    height: -webkit-fill-available;
+    position: relative;
+}
+
+.stream-list-img-container{
+  position: relative;
+  padding: 0;
+  margin: 0 10px 0 0;
+  width: 45%;
+  height: auto;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.stream-list-img-container::before {
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 15%;
+  left: 0;
+  background: #ffffff;
+  position: absolute;
+  transform-origin: right;
+}
+
 .stream-logo {
     width: 250px;
     height: 250px;
-    border-radius: 50%;
-    box-shadow: 6px 3px 6px darkslategray;
-    margin-left: 30%;
+    border-radius: 15px;
+    box-shadow: 3px 3px 6px darkslategray;
     margin-bottom: 15px;
 }
 
@@ -27,9 +91,14 @@
     }
   
     .stream-logo {
-      margin-left: 20%;
       width: 200px;
       height: 200px;
+    }
+}
+
+@media (max-width: 730px) {
+    .stream-list-item {
+      width: 80%;
     }
 }
 
@@ -39,7 +108,6 @@
     }
   
     .stream-logo {
-      margin-left: 25%;
       width: 150px;
       height: 150px;
       box-shadow: none;
