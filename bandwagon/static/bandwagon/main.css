@@ -79,15 +79,6 @@ ul {
   font-weight: 500;
 }
 
-.content-section {
-  font-family: 'Roboto', sans-serif;
-  background: #ffffff;
-  padding: 3%;
-  border: 1px solid #dddddd;
-  border-radius: 3px;
-  margin-bottom: 20px;
-}
-
 .article-detail {
   width: 100%;
   height: auto;
@@ -175,6 +166,7 @@ a.article-title-main:hover {
   height: auto;
   width: 100%;
   margin-right: 8px;
+  margin-bottom: 2%;
 }
 
 .first-post {

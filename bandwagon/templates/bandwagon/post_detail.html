@@ -1,13 +1,18 @@
 {% extends 'bandwagon/base.html' %}  
 {% load static %}
 
+{% block extracss %}
+    <link rel="stylesheet" href="{% static 'bandwagon/post-detail.css' %}">
+{% endblock %}
+
 {% block content %}
     <article class="media content-section">
-        <img src="{{ post.author.profile.image.url }}" alt="profile photo" class="rounded-circle article-img">
         <div class="media-body">
             <img src="{{ post.image.url }}" class="post-img">
+            <h2 class='article-title-main'>{{ object.title }}</h2>
             <div class="article-metadata">
-                <a class="mr-2" href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a>
+                <!-- <img src="{{ post.author.profile.image.url }}" alt="profile photo" class="rounded-circle article-img"> -->
+                <a class="mr-2" href="{% url 'user-posts' object.author.username %}">{{ object.author.first_name }} {{ object.author.last_name }}</a>
                 <small class="text-muted">{{ object.date_posted | date:'F d, Y'}}</small>
                 {% if object.author == user %}
                 <div>
@@ -16,7 +21,6 @@
                 </div>
                 {% endif %}
             </div>
-            <h2 class='article-title'>{{ object.title }}</h2>
             <p class="article-content">{{ object.content | safe }}</p>
         </div>
     </article>

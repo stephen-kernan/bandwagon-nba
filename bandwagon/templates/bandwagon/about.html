@@ -1,9 +1,17 @@
 {% extends 'bandwagon/base.html' %}
+{% load static %}
+
+{% block extracss %}
+    <link rel="stylesheet" href="{% static 'bandwagon/about.css' %}">
+{% endblock %}
+
+
 {% block content %}
     <h1 class="article-title">About Us</h1>
-    <p>
+    <p class="p-test">
         The Bandwagon is an NBA podcast hosted and produced by Stephen Kernan and Brent Dolan. We love talking about basketball and we wanted to create a 
         community to share that passion. Listen to the show <a href="https://podcasts.apple.com/us/podcast/the-bandwagon-an-nba-podcast/id1434981308">here</a>. Please, if you enjoy the show, make sure to leave a review so that others
         may find the show more easily. 
-    </p>
+    </p> 
+
 {% endblock content %}

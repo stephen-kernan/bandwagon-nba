@@ -1,0 +1,12 @@
+h1.article-title {
+    padding: 0 0 2% 5%;
+    margin-top: 5%;
+}
+
+.p-test {
+    background-color: white;
+    border-radius: 15px;
+    font-family: 'Roboto', sans-serif;
+    padding: 3%;
+}
+
