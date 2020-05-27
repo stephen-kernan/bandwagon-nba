@@ -2,32 +2,34 @@
 {% load static %}
 
 {% block extracss %}
-    <link rel="stylesheet" href="{% static 'bandwagon/team.css' %}">
+    <link rel="stylesheet" href="{% static 'bandwagon/teams.css' %}">
     <link rel="stylesheet" href="{% static 'bandwagon/podcast.css' %}">
 {% endblock extracss %}
 
 {% block content %}
-    <div class="stream-list">
-        <img class="stream-img" alt="The Logo for the {{ city }} {{ name }}" src="../../../../../media/logos/{{logo}}">   
+    <div class="stream-container">
+        <img class="team-logo" alt="The Logo for the {{ city }} {{ name }}" src="../../../../../media/logos/{{logo}}">   
+        <h1 class="article-title">The {{ city }} {{ name }}</h1>
+
+        <div class="stream-list">
+        {% for key, value in roster.items %}
+            <article class="media stream-list-item">
+                <div class="player-list-img-container">
+                    <img src="https://d2cwpp38twqe55.cloudfront.net/req/201909121/images/players/{{ value.player_id }}.jpg" class="player-list-img">
+                </div>
+
+                <div class="media-body">
+                    <div class="article-metadata">
+                        <small class="text-muted"><strong>{{ value.player_number }}</strong> {{ value.player_position }}</small>
+                    </div>
+                    <h2 class="article-title-main">
+                        <a class="article-title-main" href="{% url 'bandwagon-player' value.player_initial value.player_id %}">{{ value.player_name }}</a>
+                    </h2>
+                </div>
+            </article>
+        {% endfor %}
+        </div>
     </div>
 
-    <h1 class="article-title">The {{ city }} {{ name }}</h1>
-
-    {% for key, value in roster.items %}
-        <article class="media post-list-item">
-            <div class="player-list-img-container">
-                <img src="https://d2cwpp38twqe55.cloudfront.net/req/201909121/images/players/{{ value.player_id }}.jpg" class="player-list-img">
-            </div>
-
-            <div class="media-body">
-                <div class="article-metadata">
-                    <small class="text-muted"><strong>{{ value.player_number }}</strong> {{ value.player_position }}</small>
-                </div>
-                <h2 class="article-title-main">
-                    <a class="article-title-main" href="{% url 'bandwagon-player' value.player_initial value.player_id %}">{{ value.player_name }}</a>
-                </h2>
-            </div>
-        </article>
-    {% endfor %}
 
 {% endblock content %}

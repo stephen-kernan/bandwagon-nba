@@ -33,3 +33,44 @@
     position: absolute;
     transform-origin: right;
 }
+
+.stream-list {
+    margin-top: 2%;
+}
+
+.team-logo {
+    width: 10%;
+}
+
+.teams-list {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    padding-bottom: 3%;
+    padding-top: 1%;
+    background-color: white;
+}
+
+.teams-list .stream-list-item {
+    width: 30%
+}
+
+.teams-list .stream-list-img-container {
+    width: auto;
+}
+
+@media (max-width: 985px) {
+    .teams-list .stream-list-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 710px) {
+    .teams-list .stream-list-item {
+        width: 96%;
+    }
+
+    .article-title-main {
+        text-align: center;
+    }
+}

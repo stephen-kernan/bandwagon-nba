@@ -3,19 +3,32 @@
 
 {% block extracss %}
     <link rel="stylesheet" href="{% static 'bandwagon/podcast.css' %}">
+    <link rel="stylesheet" href="{% static 'bandwagon/teams.css' %}">
 {% endblock extracss %}
 
 {% block content %}
-    <h1 class="article-title">All Teams</h1>
+    <div class="stream-container">
 
-    <br>
+        <h1 class="article-title">All Teams</h1>
 
-    {% for key, value in teams.items %}
-        <a class="stream-list" href="{% url 'bandwagon-team' value.city value.name value.logo value.abbr %}">
-            <img class="stream-img" alt="The Logo for the {{ value.city }} {{ value.name }}" src="../../../media/logos/{{value.logo}}">
-            <p class="name">{{value.city}} {{value.name}}</p>
-        </a>
-    {% endfor %}
+        <div class="teams-list">
+            {% for key, value in teams.items %}
+                <article class="media stream-list-item">
+                    <div class="stream-list-img-container">
+                        <img src="/media/logos/{{value.logo}}" alt="The Logo for the {{ value.city }} {{ value.name }}" class="stream-list-img">
+                    </div>
+                    <div class="media-body">
+                        <h2 class="article-title-main">
+                            <a class="article-title-main" href="{% url 'bandwagon-team' value.city value.name value.logo value.abbr %}">{{ value.city }} {{ value.name }}</a>
+                        </h2>
+                    </div>
+                </article>
+            {% endfor %}        
+        </div>
+
+    </div>
+
+
 
 
 {% endblock content %}
