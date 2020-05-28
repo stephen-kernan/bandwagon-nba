@@ -1,12 +1,26 @@
 h1.article-title {
-    padding: 0 0 2% 5%;
-    margin-top: 5%;
+    padding: 0 0 1% 7%;
+    align-self: flex-start;
 }
 
 .p-test {
     background-color: white;
     border-radius: 15px;
     font-family: 'Roboto', sans-serif;
-    padding: 3%;
+    padding: 0 3%;
 }
 
+.section-container {
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+    padding-top: 3%;
+}
+
+.section-divider {
+    margin-top: 9%;
+}

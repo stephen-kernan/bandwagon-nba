@@ -30,26 +30,26 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarToggle">
                         <div class="navbar-nav mr-auto">
-                            <a class="nav-item nav-link" href="{% url 'bandwagon-about' %}">About</a>
-                            <a class="nav-item nav-link" href="{% url 'bandwagon-podcast' %}">Podcast</a>
+                            <a class="nav-item nav-link" href="{% url 'bandwagon-about' %}">ABOUT</a>
+                            <a class="nav-item nav-link" href="{% url 'bandwagon-podcast' %}">PODCAST</a>
                             <!-- <a class="nav-item nav-link" href="{% url 'bandwagon-scores' %}">Scores</a> -->
-                            <a href="{% url 'bandwagon-teams' %}" class="nav-item nav-link">Teams</a>
+                            <a href="{% url 'bandwagon-teams' %}" class="nav-item nav-link">TEAMS</a>
                         </div>
                         <!-- Navbar Right Side -->
 
                         <div class="navbar-nav">
                         {% if user.is_authenticated%}
                             {% if user.is_staff%}
-                                <a href="{% url 'post-create' %}" class="nav-item nav-link">New Post</a>
-                                <a href="{% url 'profile' %}" class="nav-item nav-link">Profile</a>
-                                <a href="{% url 'logout' %}" class="nav-item nav-link">Logout</a>
+                                <a href="{% url 'post-create' %}" class="nav-item nav-link">NEW POST</a>
+                                <a href="{% url 'profile' %}" class="nav-item nav-link">PROFILE</a>
+                                <a href="{% url 'logout' %}" class="nav-item nav-link">SIGN OUT</a>
                             {% else %}
-                                <a href="{% url 'profile' %}" class="nav-item nav-link">Profile</a>
-                                <a href="{% url 'logout' %}" class="nav-item nav-link">Logout</a>
+                                <a href="{% url 'profile' %}" class="nav-item nav-link">PROFILE</a>
+                                <a href="{% url 'logout' %}" class="nav-item nav-link">SIGN OUT</a>
                             {% endif %}
                         {% else %}                             
-                            <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
-                            <a class="nav-item nav-link" href="{% url 'user-registration' %}">Register</a>
+                            <a class="nav-item nav-link" href="{% url 'login' %}">SIGN IN</a>
+                            <a class="nav-item nav-link" href="{% url 'user-registration' %}">REGISTER</a>
                         {% endif %}
                         </div>
                     </div>

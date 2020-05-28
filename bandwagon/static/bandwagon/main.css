@@ -1,5 +1,5 @@
 body {
-    background: #ecebf1;
+    background: #d9d9da;
     color: #333333;
     margin-top: 5rem;
   }
@@ -23,16 +23,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   color: #444444;
   margin-bottom: 0;
-}
-
-.section-divider {
-  padding-top: 1.5rem;
-  padding-left: 2%;
-  margin-bottom: .5em;
-}
-
-.sidebar-section .section-divider {
-  padding-top: 5rem;
 }
 
 ul {
@@ -105,10 +95,6 @@ ul {
   text-decoration: none;
 }
 
-.post-list-item .article-metadata {
-  padding-top: 0.5rem;
-}
-
 
 .btn-info {
   background-color: #000f44;
@@ -162,101 +148,7 @@ a.article-title-main:hover {
   border-bottom: 0.25rem solid #ff2439;
 }
 
-.post-img {
-  height: auto;
-  width: 100%;
-  margin-right: 8px;
-  margin-bottom: 2%;
-}
 
-.first-post {
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 2px 2px 3px gray;
-  flex-flow: column;
-  overflow: hidden;
-  padding: 0;
-  margin-bottom: 2%;
-}
-
-.first-post .article-title-main {
-  padding-left: 2%;
-  padding-top: 1%;
-}
-
-.first-post .media-body {
-  width: 100%;
-  display: flex;
-  flex-flow: column;
-  padding-top: 0.5rem;
-  padding-bottom: 1rem;
-}
-
-.first-post .article-metadata {
-  align-self: flex-start;
-  padding-left: 3%;
-}
-
-.first-img-container {
-  border-radius: 15px;
-  width: 100%;
-}
-
-.first-img {
-  width: 100%;
-}
-
-
-.post-list-img {
-  height: auto;
-  width: 130%;
-  transform: skewX(9deg);
-  right: 15%;
-  position: relative;
-  bottom: 20px;
-}
-
-.post-list-img-container{
-  position: relative;
-  padding: 0;
-  margin: 0 10px 0 0;
-  width: 45%;
-  height: auto;
-  background: #ffffff;
-  transform: skewX(-9deg);
-  right: 30px;
-  overflow: hidden;
-}
-
-.post-list-img-container::before {
-  content: "";
-  top: 0;
-  bottom: 0;
-  right: 15%;
-  left: 0;
-  background: #ffffff;
-  position: absolute;
-  transform-origin: right;
-}
-
-.post-list-item {
-  height: 130px;
-  font-family: 'Roboto', sans-serif;
-  background: #ffffff;
-  padding: 0;
-  border-radius: 15px;
-  margin-bottom: 2%;
-  transition: 0.1s;
-  overflow: hidden;
-  box-shadow: 1.5px 0.75px 3px darkslategray;
-}
-
-.post-list-item:hover {
-  height: 150px;
-  padding: 0;
-  margin-bottom: 3%;
-  box-shadow: 2px 1px 3px black;
-}
 
 p.name {
   display: inline-block;
@@ -277,6 +169,14 @@ p.name {
 
   .article-title-main {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 765px) {
+  .site-header .navbar-nav .nav-link:hover {
+    color: #e31017;
+    border: none;
+    padding-bottom: 0.55rem;
   }
 }
 
