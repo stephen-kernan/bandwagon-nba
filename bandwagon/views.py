@@ -386,6 +386,7 @@ def PlayerDetailView(request, player_initial, player_id):
         'player_initial': player_initial,
         'player_id': player_id,
         'player_name': player_name,
+        'player_team': chart[-1][1][1],
         'stats': chart,
         'sidebar': False
     }

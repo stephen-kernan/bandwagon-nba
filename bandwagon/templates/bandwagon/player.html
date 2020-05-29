@@ -6,21 +6,28 @@
 {% endblock extracss %}
 
 {% block content %}
-    <img class="stream-img-container" src="https://d2cwpp38twqe55.cloudfront.net/req/201909121/images/players/{{ player_id }}.jpg">   
-    <h1 class="article-title">{{ player_name }}</h1>
+    <div class="section-container">
+        <div class="player-info">
+            <img class="player-img" src="https://d2cwpp38twqe55.cloudfront.net/req/201909121/images/players/{{ player_id }}.jpg">   
+            <h1 class="article-title-main">{{ player_name }} {{ player_team }}</h1>            
+        </div>
 
-    <div class="table-container">
-        <table>
-            {% for array in stats %}
-                <tr>
-                    <td class="sticky">{{ array.0 }}</th>
-                    {% for stat in array.1 %}
-                        <td>{{stat}}</td>  
-                    {% endfor %}          
-                </tr>
-            {% endfor %}
-        </table>        
+
+        <div class="table-container">
+            <table>
+                {% for array in stats %}
+                    <tr>
+                        <td class="sticky">{{ array.0 }}</th>
+                        {% for stat in array.1 %}
+                            <td>{{stat}}</td>  
+                        {% endfor %}          
+                    </tr>
+                {% endfor %}
+            </table>        
+        </div>
+
     </div>
+
 
 
 {% endblock content %}

@@ -1,3 +1,29 @@
+.section-container {
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+    padding-top: 3%;
+}
+
+.player-info {
+    display: flex;
+    align-items: flex-end;
+    margin: 0 auto 2% 7%;
+}
+
+.player-info > .article-title-main {
+    font-size: 3rem;
+    margin-left: 4%;
+}
+
+.player-img {
+    height: 175px;
+}
+
 td {
     border: 1px solid #ddd;
     background: #ffffff;
@@ -6,9 +32,11 @@ td {
   }
   
 .table-container {
-    width: 100%;
+    display: flex;
+    align-items: center;
+    width: 96%;
     overflow-x: scroll;
-    border: 1px solid #ddd;
+    margin: 0 auto 2%;
 }
 
 .sticky {
