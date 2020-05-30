@@ -88,7 +88,6 @@
         transform: skewX(9deg);
         right: 15%;
         position: relative;
-        bottom: 20px;
       }
       
       .post-list-img-container{
@@ -142,4 +141,10 @@
 
       .btn {
           border-radius: 0.5rem;
+      }
+
+      @media (max-width: 425px) {
+          .post-list-img {
+              
+          }
       }

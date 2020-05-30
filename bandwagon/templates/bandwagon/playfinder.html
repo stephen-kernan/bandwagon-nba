@@ -6,126 +6,126 @@
 {% endblock extracss %}
 
 {% block content %}
-    <!-- Play Selector -->
-    <br>
-    <h1 style="text-align: center;">Playfinder</h1>
+    <!-- Play Finder -->
+    <div class="section-container">
 
-    <!-- What, By Whom, When -->
-    <div class="pf-query">
-        <h3 style="text-align: center;">
-            Show me every 
-            <!-- What -->
-                <select name="play_type" id="play_type">
-                    <option value="" disabled selected>play</option>
-                    <option value="">Assist</option>
-                    <option value="">Dunk</option>
-                    <option value="">Three-Pointer</option>
-                </select> 
-                <!-- Button adding multiple params -->
-                <!-- <button>+</button> -->
-            by 
-            <!-- By Whom -->
-                <select name="player_id" id="player_id">
-                    <option value="" disabled selected>player</option>
-                    <option value="">Stephen Curry</option>
-                    <option value="">Kyrie Irving</option>
-                    <option value="">Lebron James</option>
-                    <option value="">Giannis Antetokounmpo</option>
-                </select>
-                <!-- Button adding multiple params -->
-                <!-- <button>+</button> -->
-            <br>
-            <br>
-            in a/an 
-            <!-- When -->
-                <select name="time_type" id="time_type">
-                    <option value="" disabled selected>range</option>
-                    <option value="game">Game</option>
-                    <option value="post-season">Post-Season</option>
-                    <option value="season">Season</option>
-                </select>
-            .
-        </h3>
-
-        <!-- Specific Occasion Follow-Up -->
-        <div class="pf-specific">
-            <h3 style="text-align: center;" id='specific-question'>
-            </h3>
-            <h3 style="text-align: center;"> 
-                <select name="specific" id="specific">
-                    <option value="" disabled selected>Choose...</option>
-                    <option value="15-16">2015-2016</option>
-                    <option value="16-17">2016-2017</option>
-                </select>
-                <!-- Button adding multiple params -->
-                <!-- <button>+</button> -->
-            </h3>
-        </div>
-      
-        <input type="submit" class="pf-submit">  
+        <h1>Playfinder</h1>
         
-        <!-- Results -->
-        <div class="pf-data">
-            <h3>Here is your data</h3>
+        <!-- What, By Whom, When -->
+        <div class="pf-query">
+            <h3>
+                Show me every 
+                <!-- What -->
+                    <select name="play_type" id="play_type">
+                        <option value="" disabled selected>play</option>
+                        <option value="">Assist</option>
+                        <option value="">Dunk</option>
+                        <option value="">Three-Pointer</option>
+                    </select> 
+                    <!-- Button adding multiple params -->
+                    <!-- <button>+</button> -->
+                by 
+                <!-- By Whom -->
+                    <select name="player_id" id="player_id">
+                        <option value="" disabled selected>player</option>
+                        <option value="">Stephen Curry</option>
+                        <option value="">Kyrie Irving</option>
+                        <option value="">Lebron James</option>
+                        <option value="">Giannis Antetokounmpo</option>
+                    </select>
+                    <!-- Button adding multiple params -->
+                    <!-- <button>+</button> -->
+                <br>
+                in a/an 
+                <!-- When -->
+                    <select name="time_type" id="time_type">
+                        <option value="" disabled selected>range</option>
+                        <option value="game">Game</option>
+                        <option value="post-season">Post-Season</option>
+                        <option value="season">Season</option>
+                    </select>
+                .
+            </h3>
 
-            <br>
-
-            <!-- Game -->
-            <div class="pf-data-item">
-
-                <!-- Game Header / Toggle Switch -->
-                <button class="pf-collapsible"><h4 class="pf-data-header">+ Game 1</h4></button>
-
-                <!-- Quarter -->
-                <div class="pf-data-item-inner">
-
-                    <!-- Quarter Header / Toggle Switch -->
-                    <button class="pf-collapsible"><h5>- First Quarter</h5></button>
-
-                    <!-- Timestamps -->
-                    <p class="pf-data-text">11:15</p>
-                    <p class="pf-data-text">09:18</p>
-                    <p class="pf-data-text">07:42</p>
-                    <p class="pf-data-text">03:51</p>
-                    <p class="pf-data-text">01:12</p> 
-                </div>
-
-                <!-- Quarter -->
-                <div class="pf-data-item-inner">
-
-                    <!-- Quarter Header / Toggle Switch -->
-                    <button class="pf-collapsible"><h5>- Second Quarter</h5></button>
-
-                    <!-- Timestamps -->
-                    <p class="pf-data-text">11:15</p>
-                    <p class="pf-data-text">09:18</p>
-                    <p class="pf-data-text">07:42</p>
-                    <p class="pf-data-text">03:51</p>
-                    <p class="pf-data-text">01:12</p> 
-                </div>
+            <!-- Specific Occasion Follow-Up -->
+            <div class="pf-specific">
+                <h3 style="text-align: center;" id='specific-question'>
+                </h3>
+                <h3 style="text-align: center;"> 
+                    <select name="specific" id="specific">
+                        <option value="" disabled selected>Choose...</option>
+                        <option value="15-16">2015-2016</option>
+                        <option value="16-17">2016-2017</option>
+                    </select>
+                    <!-- Button adding multiple params -->
+                    <!-- <button>+</button> -->
+                </h3>
             </div>
+        
+            <input type="submit" class="pf-submit">  
+            
+            <!-- Results -->
+            <div class="pf-data">
+                <h3>Here is your data</h3>
 
-            <!-- Game -->
-            <div class="pf-data-item">
+                <br>
 
-                <!-- Game Header / Toggle Switch -->
-                <button class="pf-collapsible"><h4 class="pf-data-header">+ Game 2</h4></button>
+                <!-- Game -->
+                <div class="pf-data-item">
 
-                <div class="pf-data-item-inner">
+                    <!-- Game Header / Toggle Switch -->
+                    <button class="pf-collapsible"><h4 class="pf-data-header">+ Game 1</h4></button>
 
-                    <!-- Quarter Header / Toggle Switch -->
-                    <button class="pf-collapsible"><h5>- First Quarter</h5></button>
+                    <!-- Quarter -->
+                    <div class="pf-data-item-inner">
 
-                    <!-- Timestamps -->
-                    <p class="pf-data-text">11:15</p>
-                    <p class="pf-data-text">09:18</p>
-                    <p class="pf-data-text">07:42</p>
-                    <p class="pf-data-text">03:51</p>
-                    <p class="pf-data-text">01:12</p> 
+                        <!-- Quarter Header / Toggle Switch -->
+                        <button class="pf-collapsible"><h5>- First Quarter</h5></button>
+
+                        <!-- Timestamps -->
+                        <p class="pf-data-text">11:15</p>
+                        <p class="pf-data-text">09:18</p>
+                        <p class="pf-data-text">07:42</p>
+                        <p class="pf-data-text">03:51</p>
+                        <p class="pf-data-text">01:12</p> 
+                    </div>
+
+                    <!-- Quarter -->
+                    <div class="pf-data-item-inner">
+
+                        <!-- Quarter Header / Toggle Switch -->
+                        <button class="pf-collapsible"><h5>- Second Quarter</h5></button>
+
+                        <!-- Timestamps -->
+                        <p class="pf-data-text">11:15</p>
+                        <p class="pf-data-text">09:18</p>
+                        <p class="pf-data-text">07:42</p>
+                        <p class="pf-data-text">03:51</p>
+                        <p class="pf-data-text">01:12</p> 
+                    </div>
                 </div>
-            </div>
-        </div>     
 
+                <!-- Game -->
+                <div class="pf-data-item">
+
+                    <!-- Game Header / Toggle Switch -->
+                    <button class="pf-collapsible"><h4 class="pf-data-header">+ Game 2</h4></button>
+
+                    <div class="pf-data-item-inner">
+
+                        <!-- Quarter Header / Toggle Switch -->
+                        <button class="pf-collapsible"><h5>- First Quarter</h5></button>
+
+                        <!-- Timestamps -->
+                        <p class="pf-data-text">11:15</p>
+                        <p class="pf-data-text">09:18</p>
+                        <p class="pf-data-text">07:42</p>
+                        <p class="pf-data-text">03:51</p>
+                        <p class="pf-data-text">01:12</p> 
+                    </div>
+                </div>
+            </div>     
+        </div>
     </div>
 
 
