@@ -1,24 +1,34 @@
-{% extends 'bandwagon/base.html' %}
+{% extends 'bandwagon/base_no_side.html' %}
 {% load crispy_forms_tags %}
+{% load static %}
+
+{% block extracss %}
+    <link rel="stylesheet" href="{% static 'bandwagon/users.css' %}">
+{% endblock %}
+
 {% block content %}
-    <div class="content-section">
-        <form method="POST">
-            {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class='border-bottom mb-4'>Log in</legend>
-                {{ form | crispy }}
-            </fieldset>
-            <div class="form-group">
-                <button type="submit" class="btn btn-outline-info">Login</button>
-                <small class="test-muted ml-2">
-                    <a href="{% url 'password_reset' %}">Forgot Password?</a>
+    <div class="section-container">
+
+        <div class="content-section pb-4">
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class='border-bottom mb-4 article-title-main'>Log in</legend>
+                    {{ form | crispy }}
+                </fieldset>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-info">Login</button>
+                    <small class="test-muted ml-2">
+                        <a href="{% url 'password_reset' %}">Forgot Password?</a>
+                    </small>
+                </div>
+            </form>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    Need an account? <a href="{% url 'user-registration' %}" class="ml-2">Sign up here!</a>
                 </small>
-            </div>
-        </form>
-        <div class="border-top pt-3">
-            <small class="text-muted">
-                Need an account? <a href="{% url 'user-registration' %}" class="ml-2">Sign up here!</a>
-            </small>
-        </div>    
+            </div>    
+        </div>        
     </div>
+
 {% endblock content %}

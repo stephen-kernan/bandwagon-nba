@@ -1,4 +1,4 @@
-{% extends 'bandwagon/base.html' %}  
+{% extends 'bandwagon/base_no_side.html' %}  
 {% load static %}
 
 {% block extracss %}
@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block content %}
-    <article class="media content-section">
+    <article class="media section-container">
         <div class="media-body">
             <img src="{{ post.image.url }}" class="post-img">
             <h2 class='article-title-main'>{{ object.title }}</h2>

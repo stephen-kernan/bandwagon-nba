@@ -34,6 +34,19 @@
     transform-origin: right;
 }
 
+.player-list {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    padding-bottom: 3%;
+    padding-top: 1%;
+    background-color: white;
+}
+
+.player-list .stream-list-item {
+    width: 48%;
+}
+
 .stream-list {
     margin-top: 2%;
 }
@@ -52,7 +65,7 @@
 }
 
 .teams-list .stream-list-item {
-    width: 30%
+    width: 30%;
 }
 
 .teams-list .stream-list-img-container {

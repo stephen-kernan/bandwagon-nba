@@ -1,21 +1,30 @@
-{% extends 'bandwagon/base.html' %}
+{% extends 'bandwagon/base_no_side.html' %}
 {% load crispy_forms_tags %}
+{% load static %}
+
+{% block extracss %}
+    <link rel="stylesheet" href="{% static 'bandwagon/users.css' %}">
+{% endblock %}
+
 {% block content %}
-    <div class="content-section">
-        <form method="POST">
-            {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class='border-bottom mb-4'>Join Today</legend>
-                {{ form | crispy }}
-            </fieldset>
-            <div class="form-group">
-                <button type="submit" class="btn btn-outline-info">Sign Up</button>
-            </div>
-        </form>
-        <div class="border-top pt-3">
-            <small class="text-muted">
-                Already have an account? <a href="{% url 'login' %}" class="ml-2">Sign in here!</a>
-            </small>
-        </div>    
+    <div class="section-container">
+        <div class="content-section">
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class='border-bottom mb-4 article-title-main'>Join Today</legend>
+                    {{ form | crispy }}
+                </fieldset>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-info">Sign Up</button>
+                </div>
+            </form>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    Already have an account? <a href="{% url 'login' %}" class="ml-2">Sign in here!</a>
+                </small>
+            </div>    
+        </div>        
     </div>
+
 {% endblock content %}
